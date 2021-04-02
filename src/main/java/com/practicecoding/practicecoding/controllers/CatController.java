@@ -1,5 +1,6 @@
 package com.practicecoding.practicecoding.controllers;
 
+import com.practicecoding.practicecoding.data.DogData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class CatController {
         // add <link th:href="@{styles.css}" rel="stylesheet"/> to index.html
         //to connect styles.css to index.html
         model.addAttribute("cats", favoriteCats);
+        model.addAttribute("dogs", DogData.getMyDogs());
         return "index";
     }
 

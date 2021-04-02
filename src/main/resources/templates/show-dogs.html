@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -9,22 +9,14 @@
 <thead>
 <body class="container">
 <tr>
-    <h1>My Cats Page</h1>
+    <h1>My Dog Page</h1>
 </tr>
 <table class="table table-striped">
     </thead>
     <form method="post">
         <div class="form-group">
             <nav th:replace="fragments :: navigation"></nav>
-            <h3 id="dog-text">My awesome cats page</h3>
-            <h5>My favorite cat is?</h5>
-            <ul class="nav">
-                <tr th:each="cat : ${cats}">
-                    <td class="nav-item" th:text="${cat}"></td>
-                </tr>
-
-                <input type="text" name="addName" class="form-control">
-            </ul>
+            <h3 id="dog-text">My awesome dogs page</h3>
             <h5>My favorite dog is?</h5>
             <ul class="nav">
                 <tr th:each="dog : ${dogs}">
@@ -33,9 +25,9 @@
 
                 <input type="text" name="addName" class="form-control">
             </ul>
-            <label>Name
-                <input type="submit" value="Create" class="btn btn-success">
-            </label>
+
+            <input type="submit" value="Create" class="btn btn-success">
+
         </div>
     </form>
 </table>
