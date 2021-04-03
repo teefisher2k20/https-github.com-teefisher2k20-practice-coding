@@ -16,12 +16,14 @@
             <nav th:replace="fragments :: navigation"></nav>
 
             <label>Name
-                <input type="text" name="name" class="form-control">
+                <input th:field="${dog.name}" class="form-control">
+                <p th:errors="${dog.name}"></p>
             </label>
         </div>
         <div class="form-group">
             <label>Age
-                <input type="number" name="age" class="form-control">
+                <input type="number" th:field="${dog.age}" class="form-control">
+                <p th:errors="${dog.age}"></p>
             </label>
         </div>
         <div class="form-group">
