@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+<thead>
+<h1 id="dog-text">Add A Cat</h1>
+<table class="table-striped">
+    </thead>
+    <form method="post">
+        <div class="form-group">
+            <nav th:replace="fragments :: navigation"></nav>
+
+            <label>Name
+                <input th:field="${cat.name}" class="form-control">
+                <p th:errors="${cat.name}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Age
+                <input type="number" th:field="${cat.age}" class="form-control">
+                <p th:errors="${cat.age}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Submit
+                <input type="submit" name="add" class="btn btn-success">
+            </label>
+        </div>
+    </form>
+</table>
+
+</body>
+</html>

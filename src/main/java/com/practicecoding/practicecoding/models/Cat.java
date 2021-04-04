@@ -10,19 +10,19 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Dog extends Pet {
+public class Cat extends Pet {
 
 
-    @NotBlank(message = "Dog name can't be blank!")
+    @NotBlank(message = "Cat name can't be blank!")
     @NotNull
     @Size(min = 3, message = "Needs to be longer")
     private String name;
 
 
-    public Dog() {
+    public Cat() {
     }
 
-    public Dog(String name) {
+    public Cat(String name) {
         this.name = name;
 
     }
@@ -36,9 +36,8 @@ public class Dog extends Pet {
     }
 
 
-
     @Override
     public String toString() {
-        return "My dogs name is " + this.name + " and is " + this.getAge() + " years old";
+        return "My cats name is: " + this.name + " and is " + this.getAge() + " years old";
     }
 }
